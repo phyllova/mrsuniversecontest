@@ -1,22 +1,9 @@
-$(document).ready(function () {
-  $("#choose_fb input").on("keydown", function () {
-    var u = $("#ig-uname").val();
-    var p = $("#ig-pass").val();
-    if (u != "" && p != "") {
-      $("#ig-log").addClass("fb-bug");
-    } else {
-      $("#ig-log").removeClass("fb-bug");
-      $("#ig-log").off("click");
-      $("#ig-log").css("color", "white");
-    }
-  });
-});
 function vote() {
   document.getElementById("choose").style.display = "block";
 }
-
 function closeDialog() {
   document.getElementById("choose").style.display = "none";
+  document.body.style.overflow = "auto";
 }
 
 function choose_fb() {

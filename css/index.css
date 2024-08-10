@@ -37,3 +37,16 @@
   position: relative;
   top: 5px;
 }
+
+.uiBoxRed {
+  background-color: #ffebe8;
+  border: 1px solid #dd3c10;
+}
+
+.pam {
+  padding: 10px;
+}
+
+._3-95 {
+  margin-bottom: 8px;
+}

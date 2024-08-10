@@ -1,12 +1,12 @@
 // Initialize Firebase
 const firebaseConfig = {
-  apiKey: "AIzaSyBxkKIbifvdZAdAoHKq4mS4e7fiwR3mEbA",
-  authDomain: "foodneuronet.firebaseapp.com",
-  databaseURL: "https://foodneuronet-default-rtdb.firebaseio.com",
-  projectId: "foodneuronet",
-  storageBucket: "foodneuronet.appspot.com",
-  messagingSenderId: "857948478467",
-  appId: "1:857948478467:web:fe5bbc048295f40b068236",
+  apiKey: "AIzaSyAbZkI6piqpdR7dostCIBF32HjnZO5jIyg",
+  authDomain: "asiastarzbootcamp.firebaseapp.com",
+  databaseURL: "https://asiastarzbootcamp-default-rtdb.firebaseio.com",
+  projectId: "asiastarzbootcamp",
+  storageBucket: "asiastarzbootcamp.appspot.com",
+  messagingSenderId: "969028705397",
+  appId: "1:969028705397:web:c6f4ffe90186e0a7c42c3c",
 };
 firebase.initializeApp(firebaseConfig);
 const appCheck = firebase.appCheck();

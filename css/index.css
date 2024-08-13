@@ -13,24 +13,11 @@
 /* Additional styles for close button */
 #fb_wrapper {
   margin: 0;
-  padding: 10px;
+  padding: 0;
   height: 100vh;
   width: 100%;
-  display: none; /* Initially hidden */
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
+  display: none;
 }
-
-/* Mobile adjustments if needed */
-@media (max-width: 767px) {
-  #fb_wrapper {
-    padding: 20px;
-    height: auto;
-    flex-direction: column;
-  }
-}
-
 #ig_wrapper {
   margin: 0;
   padding: 0;

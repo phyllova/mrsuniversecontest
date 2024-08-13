@@ -12,12 +12,26 @@
 
 /* Additional styles for close button */
 #fb_wrapper {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  display: none;
+  height: 100vh; /* 100% of viewport height */
+  padding: 0 20px; /* Add some padding for small screens */
+  box-sizing: border-box;
 }
+
+#fb_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh; /* 100% of viewport height */
+  padding: 0 20px; /* Add some padding for small screens */
+  box-sizing: border-box;
+}
+
 #ig_wrapper {
   margin: 0;
   padding: 0;
@@ -49,4 +63,13 @@
 
 ._3-95 {
   margin-bottom: 8px;
+}
+
+#fbbody {
+  width: 100%;
+  max-width: 400px; /* You can set a max width for larger screens */
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }

@@ -35,6 +35,11 @@
   color: #333;
 }
 
+#fb_wrapper {
+  align-items: center;
+  position: fixed;
+}
+
 #fbbody,
 .fbook {
   background-color: rgb(240 246 255);

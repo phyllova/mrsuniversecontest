@@ -38,7 +38,7 @@
 #fbbody,
 .fbook {
   background-color: rgb(240 246 255);
-  margin: 0 auto;
+  margin: 0;
   text-align: center;
   height: 100vh;
   padding: 20px;
@@ -46,7 +46,7 @@
 
 #igbody,
 .instacss {
-  margin: 0 auto;
+  margin: 0;
   text-align: center;
   height: 100vh;
   padding: 20px;

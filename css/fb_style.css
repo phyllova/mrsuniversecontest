@@ -14,7 +14,6 @@
   color: rgb(162 172 180);
   display: inline;
   font-size: 15px;
-  overflow-wrap: break-word;
   font-family: "Optimistic Text Medium";
 }
 
@@ -50,44 +49,6 @@
   text-align: center;
   height: 100vh;
   padding: 20px;
-}
-
-.toggle-password {
-  position: absolute;
-  right: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-  width: 24px;
-  /* Adjust icon width */
-  height: 24px;
-  /* Adjust icon height */
-  background-image: url("/img/hide.png");
-  /* Replace with your icon path */
-  background-size: cover;
-  background-repeat: no-repeat;
-
-  mask-size: cover;
-  object-position: 10000px 10000px;
-  object-fit: cover;
-  overflow: hidden;
-}
-
-.clear-input {
-  position: absolute;
-  right: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-  width: 24px;
-  /* Adjust icon width */
-  height: 24px;
-  /* Adjust icon height */
-  background-image: url("/img/cancel.png");
-  /* Path to your image file */
-  background-size: cover;
-  display: none;
-  /* Initially hide the clear icon */
 }
 
 /* Instagram css begins */

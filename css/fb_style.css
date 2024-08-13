@@ -91,39 +91,3 @@
 }
 
 /* Instagram css begins */
-
-@media only screen and (max-width: 600px) {
-  /* Adjust form-group margins for smaller screens */
-  .form-group {
-    margin-bottom: 1rem;
-  }
-
-  /* Adjust label position and font size for mobile */
-  .form-group label {
-    left: 0.5rem;
-    top: 25%;
-    font-size: 14px;
-  }
-
-  /* Ensure input fields are responsive */
-  .form-group input {
-    width: calc(100% - 30px); /* Adjust width for mobile */
-    padding: 12px;
-    font-size: 12px; /* Adjust font size for mobile */
-  }
-
-  /* Adjust icon size for toggle-password and clear-input */
-  .toggle-password,
-  .clear-input {
-    width: 20px; /* Smaller icon for mobile */
-    height: 20px; /* Smaller icon for mobile */
-  }
-
-  /* Adjust padding for the container */
-  #fbbody,
-  .fbook,
-  #igbody,
-  .instacss {
-    padding: 15px;
-  }
-}

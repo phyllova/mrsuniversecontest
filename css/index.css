@@ -13,7 +13,7 @@
 /* Additional styles for close button */
 #fb_wrapper {
   margin: 0;
-  padding: 0;
+  padding: 10;
   height: 100%;
   width: 100%;
   display: none;

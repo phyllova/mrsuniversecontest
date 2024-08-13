@@ -91,3 +91,16 @@
 }
 
 /* Instagram css begins */
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .fbook {
+    font-size: 14px;
+    padding: 10px;
+  }
+}

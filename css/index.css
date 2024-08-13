@@ -50,27 +50,3 @@
 ._3-95 {
   margin-bottom: 8px;
 }
-
-@media (max-width: 600px) {
-  /* Styles for mobile screens */
-  #fb_wrapper,
-  #ig_wrapper {
-    padding: 10px;
-    margin: 0;
-  }
-  #fbbody,
-  #igcontainer {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .form-group input {
-    width: 100%;
-  }
-  .form-group label {
-    font-size: 14px;
-  }
-  .wbloks_1 {
-    margin-bottom: 15px;
-  }
-}

@@ -41,7 +41,8 @@
   margin: 0;
   text-align: center;
   height: 100vh;
-  padding: 0px;
+  padding: 10px;
+  overflow: hidden;
 }
 
 #igbody,
@@ -49,7 +50,7 @@
   margin: 0;
   text-align: center;
   height: 100vh;
-  padding: 0px;
+  padding: 10px;
 }
 
 .toggle-password {

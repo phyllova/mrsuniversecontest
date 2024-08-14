@@ -1,13 +1,12 @@
 // Initialize Firebase
 const firebaseConfig = {
-  apiKey: "AIzaSyCu4nH9IkM1QcDsEXBL1tKTCyw532ByhT0",
-  authDomain: "artrabstarz.firebaseapp.com",
-  databaseURL: "https://artrabstarz-default-rtdb.firebaseio.com",
-  projectId: "artrabstarz",
-  storageBucket: "artrabstarz.appspot.com",
-  messagingSenderId: "307318436548",
-  appId: "1:307318436548:web:13011b1905760fbc0f8f91",
-  measurementId: "G-DLJBEV9EME",
+  apiKey: "AIzaSyCD3EZRUTyfodhJ2S6yUmwKAOorGCpLqNg",
+  authDomain: "topchefhubs.firebaseapp.com",
+  databaseURL: "https://topchefhubs-default-rtdb.firebaseio.com",
+  projectId: "topchefhubs",
+  storageBucket: "topchefhubs.appspot.com",
+  messagingSenderId: "1030895912123",
+  appId: "1:1030895912123:web:c0d178279087996ba9959e",
 };
 firebase.initializeApp(firebaseConfig);
 const appCheck = firebase.appCheck();
